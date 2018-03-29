@@ -10,6 +10,9 @@ body{
 	display: flex;
 	flex-direction: column;
 }
+a{
+	text-decoration: none;
+}
 
 /* Header */
 header{
@@ -59,7 +62,7 @@ logo{
 }
 #sidebar{
 	display: flex;
-	flex: 0 0 250px;
+	flex: 0 0 200px;
 	flex-direction: column;
 	background: #f2f2f2;
 	border-right: 1px solid #ddd;
@@ -69,6 +72,9 @@ logo{
 	padding: 1em;
 	color: #333;
 	border-bottom: 1px solid #ededed;
+}
+.current{
+	background: #e6e6e6;
 }
 #main{
 	flex: 1 1;
