@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+body{
+	padding: 0px;
+	margin: 0px;
+	font-family: Nunito;
+	background: #fff;
+	overflow-x: hidden;
+}
+
+/* Header */
+header{
+	top: 0px;
+	width: 98%;
+	background: #fff;
+	padding: 0 1%;
+	border-bottom: 1px solid #efefef;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+logo{
+	display: inline-block;
+	font-family: Nunito;
+	color: #38ef7d;
+	font-size: 2em;
+	font-weight: 700;
+}
+#nav{
+	display: flex;
+	justify-content: center;
+}
+.nav-item{
+	font-weight: 400;
+	font-size: 1.2em;
+	color: #666;
+	padding: 1em;
+	line-height: 1em;
+}
+.nav-item:hover{
+	color: #38ef7d;
+}
+.active{
+	font-weight: 600;
+	color: #38ef7d;
+	border-top: 3px solid #38ef7d;
+}
+#sidebar{
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background: #efefef;
+}
+.sidebar-item{
+	display: block;
+	padding: 1em;
+}
+/* Header */
+
+/* Body */
+
+/* Body */
+
+/* Footer */
+footer{
+	background: #333;
+	width: 100%;
+	float: right;
+}
+/* Footer */
+
+@media screen and (max-width: 770px){
+	#nav{
+		display: block;
+	}
+}
+
+/*#3da9dd - secondary*/
+/*#ffc246 - golden yellow*/
