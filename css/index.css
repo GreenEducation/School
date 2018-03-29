@@ -15,6 +15,7 @@ header{
 	padding: 0 1%;
 	border-bottom: 1px solid #efefef;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -24,6 +25,7 @@ logo{
 	color: #38ef7d;
 	font-size: 2em;
 	font-weight: 700;
+	padding: 5px 0;
 }
 #nav{
 	display: flex;
@@ -42,7 +44,7 @@ logo{
 .active{
 	font-weight: 600;
 	color: #38ef7d;
-	border-top: 3px solid #38ef7d;
+	border-bottom: 3px solid #38ef7d;
 }
 #sidebar{
 	width: 250px;
@@ -70,8 +72,12 @@ footer{
 /* Footer */
 
 @media screen and (max-width: 770px){
-	#nav{
-		display: block;
+	#nav {
+		width: 100%;
+		justify-content: space-around;
+	}
+	.nav-item{
+		padding: 1em 0;
 	}
 }
 
