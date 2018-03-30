@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>School</title>
-		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/staff.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
@@ -30,6 +30,40 @@
 				<a class="sidebar-item">Hiring</a>
 			</div>
 			<div id="main">
+				<div id="profiles">
+					<div id="profiles-bar">
+						<span id="profiles-bar-left">
+							<label class="profile-type" for="teaching">Teaching
+								<input type="checkbox" name="profile-type" id="teaching" checked="checked">
+								<span class="checkbox"></span>
+							</label>&nbsp;
+							<label class="profile-type" for="non-teaching">Non-Teaching
+								<input type="checkbox" name="profile-type" id="non-teaching" checked="checked">
+								<span class="checkbox"></span>
+							</label>
+						</span>
+						<span id="profiles-bar-right">
+							<input type="text" name="search" placeholder="Search">				
+							<select id="profiles-sort">
+								<option>Class-Wise</option>
+								<option>Subject-Wise</option>
+								<option>Alphabetical</option>
+							</select>
+						</span>	
+					</div>
+					<div id="profiles-main">
+						<div class="profile"></div>
+						<div class="profile"></div>
+						<div class="profile"></div>
+						<div class="profile"></div>
+						<div class="profile"></div>
+						<div class="profile"></div>
+						<div class="profile"></div>
+						<div class="profile"></div>
+						<div class="profile"></div>
+						<div class="profile"></div>
+					</div>
+				</div>
 			</div>
 		</section>
 		<!-- Body -->
