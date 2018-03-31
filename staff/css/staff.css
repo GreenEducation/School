@@ -73,6 +73,9 @@ logo{
 	color: #333;
 	border-bottom: 1px solid #ededed;
 }
+.sidebar-item:hover{
+	background: #e6e6e6;
+}
 .current{
 	background: #e6e6e6;
 }
