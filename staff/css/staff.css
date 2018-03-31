@@ -78,6 +78,8 @@ logo{
 }
 #main{
 	flex: 1 1;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 #profiles-bar{
 	width: 100%;
