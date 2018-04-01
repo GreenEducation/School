@@ -150,22 +150,30 @@ logo{
 }
 #attendance{
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: row;
+	justify-content: space-around;
 	align-items: center;
 	margin: 2em auto;
 	width: 1500px;
 	max-width: 90%;
 	border: 1px solid #333;
-}
-#attendance tr{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
+	text-align: center;
 }
 #attendance-name{
-	flex: 1 1;
+	flex-grow: 1;
+}
+.attendance-date{
+	flex: 0 0 200px;
+}
+.attendance-column-head{
+	font-weight: bold;
+}
+.attendance-column div{
+	margin: 2px 0;
+	height: 40px;
+	line-height: 40px;
+	white-space: nowrap;
+	background: #f7f7f7;
 }
 /* Body */
 
