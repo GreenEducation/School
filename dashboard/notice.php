@@ -12,9 +12,9 @@
 			<header>
 				<logo>Green Education</logo>
 				<span id="nav">
-					<a class="nav-item" href="../dashboard/calendar.html">Dashboard</a>
-					<a class="nav-item" href="../staff/profiles.html">Staff</a>
-					<a class="nav-item active" href="../students/profiles.html">Students</a>
+					<a class="nav-item active" href="../dashboard/calendar.php">Dashboard</a>
+					<a class="nav-item" href="../staff/profiles.php">Staff</a>
+					<a class="nav-item" href="../students/profiles.php">Students</a>
 					<a class="nav-item">Profile</a>
 				</span>
 			</header>
@@ -24,12 +24,17 @@
 		<!-- Body -->
 		<section id="body">
 			<div id="sidebar">
-				<a class="sidebar-item current">Profiles</a>
-				<a class="sidebar-item">Attendance</a>
-				<a class="sidebar-item">Fees</a>
-				<a class="sidebar-item">Admission</a>
+				<a class="sidebar-item current">Calendar</a>
+				<a class="sidebar-item">Notice</a>
+				<a class="sidebar-item">Reports</a>
+				<a class="sidebar-item">Exams</a>
+				<a class="sidebar-item">Parents</a>
 			</div>
 			<div id="main">
+				<div id="calendar">
+					<div id="calendar-top"></div>
+					
+				</div>
 			</div>
 		</section>
 		<!-- Body -->

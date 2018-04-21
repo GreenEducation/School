@@ -12,9 +12,9 @@
 			<header>
 				<logo>Green Education</logo>
 				<span id="nav">
-					<a class="nav-item active" href="../dashboard/calendar.html">Dashboard</a>
-					<a class="nav-item" href="../staff/profiles.html">Staff</a>
-					<a class="nav-item" href="../students/profiles.html">Students</a>
+					<a class="nav-item active" href="../dashboard/calendar.php">Dashboard</a>
+					<a class="nav-item" href="../staff/profiles.php">Staff</a>
+					<a class="nav-item" href="../students/profiles.php">Students</a>
 					<a class="nav-item">Profile</a>
 				</span>
 			</header>
