@@ -26,27 +26,45 @@
 				</div>
 				<div id="main-body">
 					<div id="table">
-						<div class="table-column table-column-large">
+				    	<div class="table-column table-column-large">
 							<div class="table-column-head">Name</div>
 							<?php
-							$date = date("Y-m-d");
-					        $getAttendance = mysqli_query($conTeacher, "SELECT Name,Attendance FROM Attendance WHERE Date='$date'"); 
-					        while($row = mysqli_fetch_assoc($getAttendance)){
-					        	echo '<div>'. $row['Name'] .'</div>
-							</div>
-						<div class="table-column table-column-small">
-							<div class="table-column-head">Day 1</div>
-					        <div>'. $row['Attendance'] .'</div>';
+							/*** change SchoolUID ***/
+						    $getAttendance = mysqli_query($conTeacher, "SELECT FirstName FROM Teacher WHERE SchoolUID='sups' ORDER BY FirstName");
+						    while($row = mysqli_fetch_assoc($getAttendance)){
+					    		echo '<div>'. $row['FirstName'] .'</div>';
 					    	}
 					    	?>
 						</div>
 						<div class="table-column table-column-small">
+							<div class="table-column-head">Day 1</div>
+							<?php
+							$date = date("Y-m-d",strtotime("-2 days"));
+							$getAttendance = mysqli_query($conTeacher, "SELECT Attendance FROM Attendance WHERE SchoolUID='sups' AND Date='$date' ORDER BY Name"); 
+							while($row = mysqli_fetch_assoc($getAttendance)){
+				        		echo '<div>'. $row['Attendance'] .'</div>';
+				        	}
+					    	?>
+						</div>
+						<div class="table-column table-column-small">
 							<div class="table-column-head">Day 2</div>
-							<div>P</div>
+							<?php
+							$date = date("Y-m-d",strtotime("-1 days"));
+							$getAttendance = mysqli_query($conTeacher, "SELECT Attendance FROM Attendance WHERE SchoolUID='sups' AND Date='$date' ORDER BY Name"); 
+							while($row = mysqli_fetch_assoc($getAttendance)){
+				        		echo '<div>'. $row['Attendance'] .'</div>';
+				        	}
+					    	?>
 						</div>
 						<div class="table-column table-column-small">
 							<div class="table-column-head">Day 3</div>
-							<div>P</div>
+							<?php
+							$date = date("Y-m-d");
+							$getAttendance = mysqli_query($conTeacher, "SELECT Attendance FROM Attendance WHERE SchoolUID='sups' AND Date='$date' ORDER BY Name"); 
+							while($row = mysqli_fetch_assoc($getAttendance)){
+				        		echo '<div>'. $row['Attendance'] .'</div>';
+				        	}
+					    	?>
 						</div>
 					</div>
 				</div>

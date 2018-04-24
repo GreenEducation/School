@@ -8,9 +8,22 @@
 }
 .profile{
 	width: 200px;
-	height: 200px;
+	height: 300px;
 	margin: 1%;
 	max-width: 90%;
-	background: #f7f7f7;
+	background: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.profile:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.profile-img{
+	width: 200px;
+	height: 200px;
+}
+.profile-info{
+	background: #fff;
+	padding: 1em 0.5em;
 }
 /* Body */
