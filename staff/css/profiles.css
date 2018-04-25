@@ -8,8 +8,8 @@
 }
 .profile{
 	width: 200px;
-	height: 300px;
-	margin: 1%;
+	margin: 5% 1%;
+	min-width: 15%;
 	max-width: 90%;
 	background: #fff;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -19,11 +19,16 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .profile-img{
-	width: 200px;
-	height: 200px;
+	width: 100%;
 }
 .profile-info{
 	background: #fff;
 	padding: 1em 0.5em;
 }
 /* Body */
+
+@media screen and (max-width: 430px){
+	.profile{
+		width: 350px;
+	}
+}

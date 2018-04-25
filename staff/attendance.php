@@ -2,27 +2,27 @@
 <html>
 	<head>
 		<title>School</title>
-		<link rel="stylesheet" type="text/css" href="css/attendance.css">
+		<link rel="stylesheet" type="text/css" href="http://greened.ga/school/staff/css/attendance.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 
 		<!-- Header -->
-		<?php include("head/header.php"); ?>
+		<?php include("./head/header.php"); ?>
 		<!-- Header -->
 
 		<!-- Body -->
 		<section id="body">
 			<div id="sidebar">
-				<a class="sidebar-item" href="profiles.php">Profiles</a>
-				<a class="sidebar-item current" href="attendance.php">Attendance</a>
-				<a class="sidebar-item" href="salaries.php">Salaries</a>
-				<a class="sidebar-item" href="hiring.php">Hiring</a>
-				<a class="sidebar-item" href="chat.php">Chat</a>
+				<a class="sidebar-item" href="http://greened.ga/school/staff/profiles">Profiles</a>
+				<a class="sidebar-item current" href="http://greened.ga/school/staff/attendance">Attendance</a>
+				<a class="sidebar-item" href="http://greened.ga/school/staff/salaries">Salaries</a>
+				<a class="sidebar-item" href="http://greened.ga/school/staff/hiring">Hiring</a>
+				<a class="sidebar-item" href="http://greened.ga/school/staff/chat">Chat</a>
 			</div>
 			<div id="main">
 				<div id="main-bar">
-					<?php include("head/main-bar.php"); ?>
+					<?php include("./head/main-bar.php"); ?>
 				</div>
 				<div id="main-body">
 					<div id="table">
