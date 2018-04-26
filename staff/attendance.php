@@ -26,51 +26,83 @@
 				</div>
 				<div id="main-body">
 					<div id="table">
-				    	<div class="table-column table-column-large">
-							<div class="table-column-head">Name</div>
-							<?php
-							/*** change SchoolUID ***/
-						    $getAttendance = mysqli_query($conTeacher, "SELECT FirstName FROM Teacher WHERE SchoolUID='sups' ORDER BY FirstName");
-						    while($row = mysqli_fetch_assoc($getAttendance)){
-					    		echo '<div>'. $row['FirstName'] .'</div>';
-					    	}
-					    	?>
+						<div class="table-row table-head">
+							<div class="table-row-name">Name</div>
+							<div class="table-row-small"><?php echo date("d/m/y",strtotime("-2 days"));?></div>
+							<div class="table-row-small"><?php echo date("d/m/y",strtotime("-1 days"));?></div>
+							<div class="table-row-small"><?php echo date("d/m/y");?></div>
 						</div>
-						<div class="table-column table-column-small" id="one">
-							<div class="table-column-head">Day 1</div>
-							<?php
-							$date = date("Y-m-d",strtotime("-2 days"));
-							$getAttendance = mysqli_query($conTeacher, "SELECT Attendance FROM Attendance WHERE SchoolUID='sups' AND Date='$date' ORDER BY Name"); 
-							while($row = mysqli_fetch_assoc($getAttendance)){
-				        		echo '<div>'. $row['Attendance'] .'</div>';
-				        	}
-					    	?>
-						</div>
-						<div class="table-column table-column-small" id="two">
-							<div class="table-column-head">Day 2</div>
-							<?php
-							$date = date("Y-m-d",strtotime("-1 days"));
-							$getAttendance = mysqli_query($conTeacher, "SELECT Attendance FROM Attendance WHERE SchoolUID='sups' AND Date='$date' ORDER BY Name"); 
-							while($row = mysqli_fetch_assoc($getAttendance)){
-				        		echo '<div>'. $row['Attendance'] .'</div>';
-				        	}
-					    	?>
-						</div>
-						<div class="table-column table-column-small">
-							<div class="table-column-head">Day 3</div>
-							<?php
-							$date = date("Y-m-d");
-							$getAttendance = mysqli_query($conTeacher, "SELECT Attendance FROM Attendance WHERE SchoolUID='sups' AND Date='$date' ORDER BY Name"); 
-							while($row = mysqli_fetch_assoc($getAttendance)){
-				        		echo '<div>'. $row['Attendance'] .'</div>';
-				        	}
-					    	?>
-						</div>
+						<?php
+						$date = date("Y-m-d");
+						//Use Inner JOIN
+					    $getAttendance = mysqli_query($conTeacher, "SELECT Name,Attendance FROM Attendance WHERE SchoolUID='sups' AND Date='$date' ORDER BY Name");
+					    while($row = mysqli_fetch_assoc($getAttendance)){
+					    	echo'
+					    	<div class="table-row">
+						    	<div class="table-row-name">'. $row['Name'] .'</div>
+								<div class="table-row-small one">'. $row['Attendance'] .'</div>
+								<div class="table-row-small two">'. $row['Attendance'] .'</div>
+								<div class="table-row-small three">'. $row['Attendance'] .'</div>
+							</div>
+							';
+				    	}
+				    	?>
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- Body -->
 
+		<!-- Script -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				//Profile-Type Selector
+				$("input[name=profile-type]").on("change", function(){
+					var type = $(this).attr("id");
+					$.post('http://greened.ga/school/staff/ajax/attendance.php', {type: type}, function(data){
+						$("#main-body").html(data);
+						if(type == "non-teaching"){
+							$("#staff-sort").attr('disabled', true);
+							$("#staff-sort").val("name");
+						}else{
+							$("#staff-sort").attr('disabled', false);
+						}
+					});
+				});
+
+				//Overwrite :contains
+				$.expr[":"].contains = $.expr.createPseudo(function(arg) {
+					return function( elem ) {
+						return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+					};
+				});
+
+				//Search
+				$("#search").on("keyup", function(){
+					$(".table-row").css("display","flex");
+					var search = $(this).val();
+					if(search != ""){
+						$(".table-row:not(:contains("+search+"))").css("display","none");
+					}
+				});
+
+				//Sort
+				/*$("#staff-sort").on("change", function(){
+					var sortType = "data-" + $("#staff-sort").val();
+					var getSorted = $(
+						$(".table-row").toArray().sort(function(a, b){
+							var aVal = (a.getAttribute(sortType)),
+							bVal = (b.getAttribute(sortType));
+							return aVal > bVal;
+						})
+					).appendTo("#main-body");
+					//$("#table").html( getSorted ); alternate method
+				});*/
+
+
+			});
+		</script>
+		<!-- Script -->
 	</body>
 </html>
