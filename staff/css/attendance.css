@@ -8,6 +8,8 @@
 	width: 1500px;
 	max-width: 90%;
 	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 -2px 4px 0 rgba(0,0,0,0.04);
+	border-radius: 8px;
 }
 .table-row{
 	display: flex;
@@ -18,6 +20,8 @@
 	height: 40px;
 	line-height: 40px;
 	white-space: nowrap;
+}
+.table-row:hover{
 	background: #f9f9f9;
 }
 .table-head{
@@ -30,18 +34,18 @@
 	min-width: 200px;
 }
 .table-row-small{
-	flex: 0 0 50px;
+	flex: 0 0 80px;
 	min-width: 15%;
 }
 /* Body */
 
-@media screen and (max-width: 600px){
-	#one{
+@media screen and (max-width: 900px){
+	.one{
 		display: none;
 	}
 }
-@media screen and (max-width: 500px){
-	#two{
+@media screen and (max-width: 600px){
+	.two{
 		display: none;
 	}
 }

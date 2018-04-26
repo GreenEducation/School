@@ -8,9 +8,9 @@ if(isset($_POST['type']) === true){
 		<div id="table">
 			<div class="table-row table-head">
 				<div class="table-row-name">Name</div>
-				<div class="table-row-small">'.date("d/m/y",strtotime("-2 days")).'</div>
-				<div class="table-row-small">'.date("d/m/y",strtotime("-1 days")).'</div>
-				<div class="table-row-small">'.date("d/m/y").'</div>
+				<div class="table-row-small one">'.date("d/m/y",strtotime("-2 days")).'</div>
+				<div class="table-row-small two">'.date("d/m/y",strtotime("-1 days")).'</div>
+				<div class="table-row-small three">'.date("d/m/y").'</div>
 			</div>';
 			$date = date("Y-m-d");
 			//Use Inner JOIN
@@ -33,9 +33,9 @@ if(isset($_POST['type']) === true){
 		<div id="table">
 			<div class="table-row table-head">
 				<div class="table-row-name">Name</div>
-				<div class="table-row-small">'.date("d/m/y",strtotime("-2 days")).'</div>
-				<div class="table-row-small">'.date("d/m/y",strtotime("-1 days")).'</div>
-				<div class="table-row-small">'.date("d/m/y").'</div>
+				<div class="table-row-small one">'.date("d/m/y",strtotime("-2 days")).'</div>
+				<div class="table-row-small two">'.date("d/m/y",strtotime("-1 days")).'</div>
+				<div class="table-row-small three">'.date("d/m/y").'</div>
 			</div>';
 			$date = date("Y-m-d");
 			//Use Inner JOIN
