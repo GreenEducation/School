@@ -1,22 +1,12 @@
 <?php include("connect.php"); ?>
 <link rel="stylesheet" type="text/css" href="http://greened.ga/school/staff/css/staff.css">
+<script type="text/javascript" src="http://greened.ga/school/staff/js/jquery.js.gz"></script>
 <script type="text/javascript">
-	document.addEventListener("DOMContentLoaded", function(event) {
-		var toggle = document.getElementById("sidebar-toggle");
-		var glass = document.getElementById("glass");
-		var sidebar = document.getElementById("sidebar");
-		toggle.addEventListener("click", toggleSidebar);
-		glass.addEventListener("click", toggleSidebar);
-		function toggleSidebar(){
-			if(window.getComputedStyle(sidebar).getPropertyValue('display') === 'flex'){
-				sidebar.style.display = 'none';
-				glass.style.display = 'none';
-			}
-			else{
-				sidebar.style.display = 'flex';
-				glass.style.display = 'block';
-			}
-		}
+	$(document).ready(function(){
+		$("#sidebar-toggle").on("click", function(){
+			$("#sidebar").toggle();
+			$("#glass").toggle();
+		});
 	});
 </script>
 <section id="header">

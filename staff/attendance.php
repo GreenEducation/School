@@ -36,7 +36,7 @@
 					    	}
 					    	?>
 						</div>
-						<div class="table-column table-column-small">
+						<div class="table-column table-column-small" id="one">
 							<div class="table-column-head">Day 1</div>
 							<?php
 							$date = date("Y-m-d",strtotime("-2 days"));
@@ -46,7 +46,7 @@
 				        	}
 					    	?>
 						</div>
-						<div class="table-column table-column-small">
+						<div class="table-column table-column-small" id="two">
 							<div class="table-column-head">Day 2</div>
 							<?php
 							$date = date("Y-m-d",strtotime("-1 days"));

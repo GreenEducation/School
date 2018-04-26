@@ -1,8 +1,8 @@
 RewriteEngine On
 RewriteBase /school/staff/
 
-RewriteRule ^profiles/([a-zA-Z0-9]+)$ profiles/index.php?uid=$1
-RewriteRule ^profiles/([a-zA-Z0-9]+)/$ profiles/index.php?uid=$1
+RewriteRule ^profiles/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ profiles/index.php?stype=$1&uid=$2
+RewriteRule ^profiles/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/$ profiles/index.php?stype=$1&uid=$2
 
 RewriteRule ^([a-zA-Z0-9]+)$ $1.php
 RewriteRule ^([a-zA-Z0-9]+)/$ $1.php

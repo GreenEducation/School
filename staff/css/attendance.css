@@ -11,9 +11,11 @@
 }
 .table-column-large{
 	flex-grow: 1;
+	min-width: 200px;
 }
 .table-column-small{
-	flex: 0 0 200px;
+	flex: 0 0 50px;
+	min-width: 15%;
 }
 .table-column-head{
 	font-weight: bold;
@@ -26,3 +28,14 @@
 	background: #f7f7f7;
 }
 /* Body */
+
+@media screen and (max-width: 600px){
+	#one{
+		display: none;
+	}
+}
+@media screen and (max-width: 500px){
+	#two{
+		display: none;
+	}
+}
