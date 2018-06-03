@@ -1,5 +1,6 @@
 <?php
 $conStaff = mysqli_connect('rayyanaqcom.domaincommysql.com', 'greened', 'education','greened_staff');
+$conStudent = mysqli_connect('rayyanaqcom.domaincommysql.com', 'greened', 'education','greened_student');
 $conTeacher = mysqli_connect('rayyanaqcom.domaincommysql.com', 'greened', 'education','greened_teacher');
 //host,username,password,dbname
 ?>

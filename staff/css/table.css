@@ -28,6 +28,7 @@
 	font-weight: bold;
 	border-bottom: 1px solid #ddd;
 	display: flex !important;
+	background: #fff !important;
 }
 .table-row-name{
 	flex: 1 0 auto;

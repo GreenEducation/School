@@ -1,5 +1,5 @@
 /* Body */
-#main-body{
+#profiles{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -14,6 +14,8 @@
 	background: #fff;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 .profile:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
